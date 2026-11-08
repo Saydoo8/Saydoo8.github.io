@@ -1,291 +1,283 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sayed Hashem Alhussaini | Data Science, IT Operations and Information Security</title>
-<meta name="description" content="Portfolio of Sayed Hashem Alhussaini, Information Systems graduate from the University of Bahrain with internship experience in endpoint security, system administration and ITSM at National Bank of Kuwait.">
-<meta property="og:title" content="Sayed Hashem Alhussaini | Data Scientist, IT Operations and Information Security Specialist">
-<meta property="og:description" content="Information Systems graduate applying tactical strategy and structured problem-solving to build secure, data-driven systems.">
+<title>Sayed Hashem Alhussaini | Banking IT, Cyber GRC &amp; Threat Analytics</title>
+<meta name="description" content="Portfolio of Sayed Hashem Alhussaini, an Information Systems professional specializing in banking IT infrastructure, Cyber GRC, and endpoint threat analytics.">
+<meta property="og:title" content="Sayed Hashem Alhussaini | Portfolio">
+<meta property="og:description" content="Banking IT infrastructure, Cyber GRC, and endpoint threat analytics, backed by Python and data analytics.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#0A0D12; --panel:#141A22; --text:#F2F5F8; --muted:#9AA7B5; --accent:#22D3EE; --line:#26303B; --on-accent:#04222A;
-  --f-head:'Space Grotesk',system-ui,sans-serif; --f-body:'Inter',system-ui,sans-serif; --f-mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
-}
-:root[data-theme="light"]{
-  --bg:#F6F8FA; --panel:#FFFFFF; --text:#0B1118; --muted:#4A5663; --accent:#0E7490; --line:#D3DAE1; --on-accent:#FFFFFF;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{background:var(--bg);color:var(--text);font-family:var(--f-body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
-a{color:var(--accent);text-underline-offset:3px;transition:color .2s,opacity .2s}
-a:hover{opacity:.8}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-
-/* top bar */
-header.bar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
-.mark{font-family:var(--f-mono);font-size:.95rem;color:var(--text);text-decoration:none;white-space:nowrap}
-.mark span{color:var(--accent)}
-nav{display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}
-nav::-webkit-scrollbar{display:none}
-nav a{color:var(--muted);text-decoration:none;font-size:.95rem;padding:8px 10px;white-space:nowrap;border-radius:4px}
-nav a:hover{color:var(--text);opacity:1}
-.toggle{flex:none;background:none;border:1px solid var(--line);color:var(--text);font:500 .875rem var(--f-mono);padding:8px 12px;border-radius:4px;cursor:pointer;transition:border-color .2s,color .2s}
-.toggle:hover{border-color:var(--accent);color:var(--accent)}
-
-/* hero */
-.hero{padding:72px 0 88px}
-.hero h1{font-family:var(--f-head);font-weight:700;font-size:clamp(2.4rem,7vw,5rem);line-height:1.02;letter-spacing:-.03em;max-width:14ch}
-.hero .role{font-family:var(--f-head);font-weight:500;font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--accent);margin-top:20px;max-width:34ch;line-height:1.3}
-.hero .statement{color:var(--muted);max-width:60ch;margin-top:20px}
-.btn{display:inline-block;margin-top:32px;background:var(--accent);color:var(--on-accent);font:600 1rem var(--f-body);text-decoration:none;padding:14px 26px;border-radius:4px;transition:transform .2s,box-shadow .2s}
-.btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 0 -2px color-mix(in srgb,var(--accent) 45%,transparent)}
-
-/* terminal */
-.term{margin-top:56px;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 25%,transparent),0 24px 60px -30px color-mix(in srgb,var(--accent) 50%,transparent)}
-.term-bar{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);font:400 .85rem var(--f-mono);color:var(--muted)}
-.term-bar i{width:10px;height:10px;border-radius:50%;border:1px solid var(--muted);display:inline-block}
-.term-bar b{font-weight:400;margin-left:auto;margin-right:auto}
-.term-body{padding:20px;font:400 .95rem/1.7 var(--f-mono);min-height:340px;max-height:460px;overflow-y:auto}
-.term-body p{white-space:pre-wrap;word-break:break-word}
-.term-body .cmd{color:var(--text)}
-.term-body .ps{color:var(--accent)}
-.term-body .out{color:var(--muted);margin-bottom:10px}
-.term-body .out strong{color:var(--text);font-weight:500}
-.term-body a{color:var(--accent)}
-.term-body .ok{color:var(--accent)}
-.term-form{display:flex;align-items:center;gap:8px;padding:0 20px 8px;font:400 .95rem var(--f-mono)}
-.term-form label{color:var(--accent)}
-.term-form input{flex:1;min-width:0;background:none;border:0;color:var(--text);font:inherit;padding:10px 0;caret-color:var(--accent)}
-.term-form input:focus{outline:none}
-.term-form:focus-within{background:color-mix(in srgb,var(--accent) 6%,transparent)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;padding:8px 20px 20px}
-.chips button{background:none;border:1px solid var(--line);color:var(--text);font:400 .875rem var(--f-mono);padding:8px 12px;border-radius:4px;cursor:pointer;transition:border-color .2s,color .2s}
-.chips button:hover{border-color:var(--accent);color:var(--accent)}
-
-/* sections */
-main section{padding:64px 0;border-top:1px solid var(--line);position:relative}
-main section::before{content:"";position:absolute;top:-1px;left:0;width:96px;height:1px;background:repeating-linear-gradient(90deg,var(--accent) 0 8px,transparent 8px 14px)}
-.row{display:grid;grid-template-columns:220px 1fr;gap:32px}
-h2{font-family:var(--f-head);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;line-height:1.2}
-.lead{font-size:1.2rem;max-width:62ch}
-.role-title{font-family:var(--f-head);font-weight:600;font-size:1.35rem;line-height:1.3}
-.meta{font:400 .9rem var(--f-mono);color:var(--muted);margin:6px 0 14px}
-.exp p{max-width:62ch}
-.skills{display:grid;grid-template-columns:1fr 1fr;gap:32px 40px}
-.skills h3{font-family:var(--f-head);font-weight:600;font-size:1.05rem;margin-bottom:8px;color:var(--accent)}
-.skills ul,.edu ul{list-style:none}
-.skills li,.edu li{padding:8px 0;border-bottom:1px solid var(--line)}
-.skills li:last-child,.edu li:last-child{border-bottom:0}
-.edu h3{font-family:var(--f-head);font-weight:600;font-size:1.05rem;margin:0 0 6px;color:var(--accent)}
-.edu section{padding:0;border:0}
-.edu .grp+.grp{margin-top:28px}
-.contact ul{list-style:none;max-width:520px}
-.contact li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.contact li span{color:var(--muted);font-family:var(--f-mono);font-size:.9rem}
-.contact a{word-break:break-all}
-footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.95rem}
-
-@media (max-width:768px){
-  .row{grid-template-columns:1fr;gap:20px}
-  .skills{grid-template-columns:1fr}
-  .hero{padding:48px 0 64px}
-  main section{padding:48px 0}
-  .bar .wrap{padding:0 16px}
-  .wrap{padding:0 20px}
-  .mark{display:none}
-  .term-body{min-height:300px;max-height:400px;padding:16px}
-  .term-form{padding:0 16px 8px}.chips{padding:8px 16px 16px}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *{transition:none!important;animation:none!important}
-}
+:root{--bg:#fff;--ink:#1e293b;--mute:#475569;--acc:#34568b;--mist:#eef2f7;--rule:#cbd5e1;--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--sans:'Public Sans',system-ui,-apple-system,Segoe UI,sans-serif}
+:root[data-theme=dark]{--bg:#0f172a;--ink:#e2e8f0;--mute:#a8b5c9;--acc:#8fb0e3;--mist:#1a2438;--rule:#334155}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--sans)}
+a{color:var(--acc);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:2px}
+.wrap{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1200px;margin:0 auto}
+aside{position:sticky;top:0;height:100vh;padding:2.5rem 1.5rem;display:flex;flex-direction:column;gap:1.5rem;border-right:1px solid var(--rule)}
+.brand{font:500 1rem/1.3 var(--mono);color:var(--ink);text-decoration:none}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.35rem}
+nav a{display:block;padding:.25rem 0;color:var(--mute);text-decoration:none;font:400 .95rem var(--mono)}
+nav a:hover{color:var(--acc)}
+.side-foot{margin-top:auto;display:flex;flex-direction:column;gap:.4rem;font:400 .85rem var(--mono);word-break:break-all}
+#theme{align-self:flex-start;background:none;border:1px solid var(--rule);color:var(--ink);font:400 .85rem var(--mono);padding:.4rem .7rem;border-radius:4px;cursor:pointer}
+#theme:hover{border-color:var(--acc)}
+main{padding:0 clamp(1.25rem,5vw,4rem) 4rem}
+section{padding:4rem 0 1rem;max-width:760px}
+h1,h2,h3{line-height:1.2;margin:0}
+h2{font-size:1.6rem;margin-bottom:1.5rem;padding-bottom:.6rem;border-bottom:1px solid var(--rule)}
+.hero{position:relative;min-height:88vh;display:flex;flex-direction:column;justify-content:center;padding-top:3rem;max-width:none;overflow:hidden}
+.hero>*{position:relative;z-index:1;max-width:680px}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:700;letter-spacing:-.02em}
+.role{font:500 1rem var(--mono);color:var(--acc);margin:.8rem 0 1.5rem}
+.hero p.note{font-size:1.1rem;color:var(--mute)}
+.btn{display:inline-block;align-self:flex-start;margin-top:1.5rem;padding:.8rem 1.4rem;background:var(--acc);color:var(--bg);font:500 .95rem var(--mono);text-decoration:none;border-radius:4px}
+.btn:hover{filter:brightness(1.12)}
+.court{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:min(560px,70vw);height:auto;z-index:0;opacity:.55;pointer-events:none}
+.court *{fill:none;stroke:var(--rule);stroke-width:2}
+.court .d{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.8s ease-out .3s forwards}
+.court .ball{fill:var(--acc);stroke:none}
+@keyframes draw{to{stroke-dashoffset:0}}
+.skills{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.skills li,.tools span{font:400 .88rem var(--mono);padding:.3rem .7rem;border:1px solid var(--rule);background:var(--mist);border-radius:3px}
+.proj{border-top:1px solid var(--rule);padding:1.8rem 0}
+.proj:last-of-type{border-bottom:1px solid var(--rule)}
+.proj h3{font-size:1.3rem;margin-bottom:.6rem}
+.proj:target h3{color:var(--acc)}
+.tools{display:flex;flex-wrap:wrap;gap:.5rem;margin:.9rem 0}
+.row{display:flex;flex-wrap:wrap;gap:1.2rem;align-items:center;margin-top:.9rem;font:400 .9rem var(--mono)}
+.more{background:none;border:0;border-bottom:1px solid var(--acc);color:var(--acc);font:inherit;padding:0;cursor:pointer}
+.detail{margin-top:1.2rem;padding:1.2rem 1.3rem;background:var(--mist);border-left:3px solid var(--acc);border-radius:0 4px 4px 0}
+.detail[hidden]{display:none}
+.detail h4{margin:1.1rem 0 .3rem;font-size:1rem}
+.detail h4:first-child{margin-top:0}
+.detail p{margin:.3rem 0 .9rem}
+.detail ul{padding-left:1.2rem;margin:.3rem 0}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+.shots figure{margin:0}
+.shots img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--rule);border-radius:4px;background:var(--bg)}
+.job h3{font-size:1.1rem}
+.meta{font:400 .88rem var(--mono);color:var(--mute);margin:.3rem 0 .8rem}
+.job ul{padding-left:1.2rem}
+.job li{margin-bottom:.6rem}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.7rem 0;border-bottom:1px solid var(--rule)}
+.list time{font:400 .88rem var(--mono);color:var(--mute)}
+.contact a{display:block;margin:.4rem 0;font:400 1rem var(--mono);word-break:break-all}
+footer{max-width:760px;margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--mute);font:400 .85rem var(--mono)}
+@media(max-width:860px){
+.wrap{display:block}
+aside{position:sticky;top:0;z-index:5;height:auto;flex-direction:row;align-items:center;gap:1rem;padding:.7rem 1rem;background:var(--bg);border-right:0;border-bottom:1px solid var(--rule)}
+.brand{display:none}
+nav{overflow-x:auto;flex:1}
+nav ul{flex-direction:row;gap:1rem;white-space:nowrap}
+.side-foot{margin:0}
+.side-foot a{display:none}
+.hero{min-height:80vh}
+.court{right:-120px;opacity:.35}
+html{scroll-padding-top:4rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.court .d{animation:none;stroke-dashoffset:0}}
 </style>
 </head>
 <body>
-<header class="bar">
-  <div class="wrap">
-    <a class="mark" href="#top" aria-label="Back to top">sayed<span>@</span>portfolio</a>
-    <nav aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="toggle" id="theme" type="button" aria-label="Switch to light mode">Light</button>
-  </div>
-</header>
-
+<div class="wrap">
+<aside>
+<a class="brand" href="#top">Sayed Hashem<br>Alhussaini</a>
+<nav aria-label="Main"><ul>
+<li><a href="#work">Work</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#certs">Certifications</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav>
+<div class="side-foot">
+<a href="mailto:Saydooh8@gmail.com">Saydooh8@gmail.com</a>
+<button id="theme" type="button" aria-pressed="false">Dark mode</button>
+</div>
+</aside>
 <main id="top">
-  <div class="wrap">
-    <section class="hero" aria-labelledby="name" style="border:0;padding-bottom:88px">
-      <h1 id="name">Sayed Hashem Alhussaini</h1>
-      <p class="role">Data Scientist &amp; IT Operations and Information Security Specialist</p>
-      <p class="statement">Information Systems graduate from the University of Bahrain with hands-on internship experience at National Bank of Kuwait in endpoint security, system administration, and ITSM. I apply tactical strategy and structured problem-solving to build secure, data-driven systems.</p>
-      <a class="btn" href="#experience">See my work</a>
+<section class="hero" aria-labelledby="name">
+<svg class="court" viewBox="0 0 500 470" aria-hidden="true">
+<rect class="d" x="10" y="10" width="480" height="450"/>
+<rect class="d" x="170" y="10" width="160" height="190"/>
+<circle class="d" cx="250" cy="200" r="60"/>
+<path class="d" d="M60 10 V120 A200 200 0 0 0 440 120 V10"/>
+<path class="d" d="M215 50 H285"/>
+<circle class="ball" cx="250" cy="200" r="7"/>
+</svg>
+<h1 id="name">Sayed Hashem Alhussaini</h1>
+<p class="role">Banking IT infrastructure / Cyber GRC / Endpoint threat analytics</p>
+<p class="note">An Information Systems professional specializing in banking IT infrastructure, Cyber GRC, and endpoint threat analytics. Combines enterprise IT operations experience with a strong foundation in IT General Controls and GRC frameworks. Skilled in Python, threat analysis, and data analytics, evaluates system risks, automates policy monitoring, and optimizes security controls to deliver data-backed risk intelligence across regulated financial and enterprise environments.</p>
+<a class="btn" href="#work">View my work</a>
+</section>
 
-      <div class="term" role="region" aria-label="Interactive terminal with a summary of my skills and background">
-        <div class="term-bar"><i></i><i></i><i></i><b>sayed@portfolio: ~</b></div>
-        <div class="term-body" id="out" aria-live="polite"></div>
-        <form class="term-form" id="form" autocomplete="off">
-          <label for="cmd">$</label>
-          <input id="cmd" type="text" spellcheck="false" autocapitalize="off" aria-label="Type a command, for example help" placeholder="type help">
-        </form>
-        <div class="chips" id="chips">
-          <button type="button" data-c="whoami">whoami</button>
-          <button type="button" data-c="skills">skills</button>
-          <button type="button" data-c="experience">experience</button>
-          <button type="button" data-c="education">education</button>
-          <button type="button" data-c="contact">contact</button>
-        </div>
-      </div>
-    </section>
+<section id="work" aria-labelledby="h-work">
+<h2 id="h-work">Projects</h2>
 
-    <section id="about" aria-labelledby="h-about">
-      <div class="row">
-        <h2 id="h-about">About</h2>
-        <p class="lead">I am an Information Systems graduate with practical experience across IT infrastructure management, endpoint security, IT service management (ITSM), and data science and analytics. I am driven by competitive energy, strategic execution, and tactical teamwork.</p>
-      </div>
-    </section>
+<article class="proj" id="olympics">
+<h3>Olympic Games Historical Data Analysis</h3>
+<p>Analyzes over a century of Olympic Games historical data to identify key trends in nation performance, sports specialization, and demographic evolution over time.</p>
+<div class="row"><button class="more" aria-expanded="false" aria-controls="d1">Read more</button></div>
+<div class="detail" id="d1" hidden>
+<h4>Problem Statement</h4>
+<p>This project analyzes over a century of Olympic Games historical data to identify key trends in nation performance, sports specialization, and demographic evolution over time. By examining these patterns, the analysis delivers actionable insights into how geopolitical shifts, athlete physical profiles, and strategic nation-level sport focus drive Olympic medal success.</p>
+<h4>Executive Summary</h4>
+<p>This project followed an end-to-end data analytics pipeline, beginning with data ingestion and intensive cleaning. The dataset comprised historical Olympic participant records, including athlete demographics (age, sex, height, weight), event details, medal wins, and National Olympic Committee (NOC) region mappings. Primary cleaning steps involved standardizing categorical values, parsing numeric physical attributes, addressing duplicate event entries versus duplicate athlete records, and mapping country codes to consistent modern regions.</p>
+<p>Through exploratory data analysis (EDA), we evaluated multi-event athlete participation, national medal distributions, physical demographic trends across sports, and country-level sport specialization—defined as the proportion of a nation’s total medal output coming from a single sport discipline. Key findings reveal that top-performing Olympic nations strategically concentrate athletic investments into high-density medal sports, resulting in distinct specialization profiles (e.g., Jamaica in Athletics or Kenya in Distance Running). Furthermore, athlete physical traits demonstrated strong clustering around specific sports, reflecting physical specialization alongside competitive specialization.</p>
+<p>In conclusion, strategic specialization is a stronger predictor of localized Olympic dominant performance than broad participation across all sports. We recommend that emerging National Olympic Committees prioritize targeted funding and development programs in high-specialization sports where historical nation performance aligns with athlete physical profiles, rather than diluting resources across all Olympic disciplines.</p>
+</div>
+</article>
 
-    <section id="experience" aria-labelledby="h-exp">
-      <div class="row">
-        <h2 id="h-exp">Experience</h2>
-        <div class="exp">
-          <h3 class="role-title">IT Intern, National Bank of Kuwait</h3>
-          <p class="meta">July 2026 – August 2026</p>
-          <p>Handled enterprise endpoint security provisioning, CrowdStrike deployment, Trellix encryption, and Remedy ticketing system administration, while evaluating payment system resilience.</p>
-        </div>
-      </div>
-    </section>
+<article class="proj" id="olist-sellers">
+<h3>Olist Seller Evaluation &amp; Channel Analysis</h3>
+<p>Evaluates acquisition channels against seller performance, order activity, and regional metrics for Olist e-commerce.</p>
+<div class="row"><button class="more" aria-expanded="false" aria-controls="d2">Read more</button></div>
+<div class="detail" id="d2" hidden>
+<p>Olist needs to know if the channels and sales people it uses to acquire new business have been bringing in high-caliber sellers, and if the sellers' performance is consistent among the different seller types and regions.</p>
+<ul>
+<li>Evaluate channel performance, seller activity, orders, sales and reviews</li>
+<li>Identify best performers and problem sellers</li>
+<li>Identify states where there are customers but no sellers</li>
+<li>Recommend steps for acquisitions, onboarding and logistics</li>
+</ul>
+<div class="shots">
+<figure><img src="image_df8699.png" alt="Olist seller and channel analysis chart, first view" loading="lazy" onerror="this.closest('figure').hidden=true"></figure>
+<figure><img src="image_df865e.png" alt="Olist seller and channel analysis chart, second view" loading="lazy" onerror="this.closest('figure').hidden=true"></figure>
+</div>
+</div>
+</article>
 
-    <section id="skills" aria-labelledby="h-skills">
-      <div class="row">
-        <h2 id="h-skills">Skills</h2>
-        <div class="skills">
-          <div>
-            <h3>Security</h3>
-            <ul><li>Endpoint Security Administration</li><li>CrowdStrike Deployment</li><li>Trellix Encryption</li></ul>
-          </div>
-          <div>
-            <h3>IT Operations</h3>
-            <ul><li>System Administration</li><li>ITSM &amp; Remedy Ticketing</li><li>Network &amp; Cloud Basics</li></ul>
-          </div>
-          <div>
-            <h3>Data</h3>
-            <ul><li>Python Data Analytics</li><li>SQL &amp; Database Management</li></ul>
-          </div>
-        </div>
-      </div>
-    </section>
+<article class="proj" id="olist-delivery">
+<h3>Olist Delivery Time Prediction</h3>
+<p>Predicts e-commerce delivery times using a Gradient Boosting model trained on order volume, size, weight, and distance features.</p>
+<div class="tools"><span>Python</span><span>Gradient Boosting</span><span>Scikit-Learn</span></div>
+<div class="row"><button class="more" aria-expanded="false" aria-controls="d3">Read more</button></div>
+<div class="detail" id="d3" hidden>
+<h4>Business Case: Accurate Delivery Dates</h4>
+<p>Delivery dates shown at checkout are too cautious. Orders usually arrive early, and long estimates may push customers to abandon their purchase.</p>
+<h4>Solution</h4>
+<p>A prediction tool estimates each order's delivery time from its own details: items, size, weight and distance.</p>
+<h4>Technical: Data, Preparation and Metric</h4>
+<p>Seller-to-customer distance is the strongest driver of delivery time. Same-state orders arrive faster. Weight and size matter only slightly; order hour barely matters. Combined 6 datasets into one view per order, kept about 96,000 delivered orders, removed missing and impossible values, built 13 features (distance, weight, volume, item counts, order timing). Metric: average error (how many days our prediction misses by, on average).</p>
+<h4>Technical: Model Comparison</h4>
+<p>Gradient Boosting achieved the lowest error (5.1 days) out of 5 models tested (outperforming Decision Tree, Random Forest, Linear Regression, and K-Nearest Neighbors), capturing non-linear effects such as distance.</p>
+<div class="shots">
+<figure><img src="Screenshot (115).png" alt="Delivery time prediction project screenshot 1" loading="lazy" onerror="this.closest('figure').hidden=true"></figure>
+<figure><img src="Screenshot (116).png" alt="Delivery time prediction project screenshot 2" loading="lazy" onerror="this.closest('figure').hidden=true"></figure>
+<figure><img src="Screenshot (117).png" alt="Delivery time prediction project screenshot 3" loading="lazy" onerror="this.closest('figure').hidden=true"></figure>
+<figure><img src="Screenshot (118).png" alt="Delivery time prediction project screenshot 4" loading="lazy" onerror="this.closest('figure').hidden=true"></figure>
+</div>
+</div>
+</article>
 
-    <section id="education" aria-labelledby="h-edu">
-      <div class="row">
-        <h2 id="h-edu">Education and certifications</h2>
-        <div class="edu">
-          <div class="grp">
-            <h3>Degree</h3>
-            <ul><li>B.S. in Information Systems, University of Bahrain</li></ul>
-          </div>
-          <div class="grp">
-            <h3>Certifications</h3>
-            <ul><li>IBM Cybersecurity Certifications</li><li>University of Colorado Enterprise Certifications</li></ul>
-          </div>
-        </div>
-      </div>
-    </section>
+<article class="proj" id="habit-tracker">
+<h3>Habit Tracker App</h3>
+<p>Personal Habit Tracker - An interactive, data-driven web application built with Python, Streamlit, Pandas, and OpenAI (via OpenRouter) that helps users build, manage, and analyze long-term habits. The system persists data in lightweight .CSV files and leverages LLM integration to act as a personal habit coach.</p>
+<div class="tools"><span>Python</span><span>Streamlit</span><span>Pandas</span><span>OpenRouter</span><span>REST API</span></div>
+<div class="row"><a href="https://habit-tracker-application.streamlit.app/" target="_blank" rel="noopener">Open the live app</a><button class="more" aria-expanded="false" aria-controls="d4">Read more</button></div>
+<div class="detail" id="d4" hidden>
+<h4>Key Features</h4>
+<h4>Core Features (User Stories &amp; Requirements)</h4>
+<ul>
+<li><b>Add New Habits:</b> Capture detailed metadata including habit name, tracking frequency (Daily, Weekly, Monthly), target goals, category (Health, Fitness, Education, etc.), and start date.</li>
+<li><b>Log Completions:</b> Easily mark habits as complete for today or past dates with automatic timestamping and duplicate-entry prevention.</li>
+<li><b>Streaks &amp; Analytics:</b> Calculate continuous daily streaks dynamically, visualize completion frequencies across habits and categories using interactive bar charts, and calculate overall momentum.</li>
+<li><b>Habit Management:</b> Edit existing habit details (name, frequency, targets) or permanently delete habits along with their historical logs.</li>
+<li><b>Centralized Data View:</b> Display all registered habits and metadata in a structured, sortable data grid.</li>
+<li><b>Data Persistence:</b> Stores all active habits in habits.csv and tracking logs in habit_logs.csv to ensure state is maintained across app initializations.</li>
+</ul>
+<h4>Stretch Goals &amp; Value-Add Enhancements</h4>
+<ul>
+<li><b>AI Habit Coach:</b> Integrates OpenRouter’s LLM (inclusionai/ling-3.0-flash-fin:free) to analyze user completion trends, detect burnout risks, and suggest behavioral strategies like Habit Stacking.</li>
+<li><b>Reward System &amp; Gamification:</b> Displays celebration milestones (e.g., Streamlit balloon animations) when reaching a 3+ day streak.</li>
+<li><b>Motivational Integration:</b> Fetches dynamic inspirational quotes via external REST API integrations (RapidAPI) upon completing a habit.</li>
+</ul>
+</div>
+</article>
 
-    <section id="contact" class="contact" aria-labelledby="h-contact">
-      <div class="row">
-        <h2 id="h-contact">Contact</h2>
-        <ul>
-          <li><span>Email</span><a href="mailto:saydooh8@gmail.com">saydooh8@gmail.com</a></li>
-          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/sayed-hashem-alhussaini" target="_blank" rel="noopener">linkedin.com/in/sayed-hashem-alhussaini</a></li>
-          <li><span>GitHub</span><a href="https://github.com/Saydoo8" target="_blank" rel="noopener">github.com/Saydoo8</a></li>
-        </ul>
-      </div>
-    </section>
-  </div>
+<article class="proj" id="age-prediction">
+<h3>Age Prediction Deep Learning App</h3>
+<p>Age Prediction Deep Learning App - Predicts age based on user-uploaded facial imagery using a model trained on specialized image datasets.</p>
+<div class="row"><button class="more" aria-expanded="false" aria-controls="d5">Read more</button></div>
+<div class="detail" id="d5" hidden>
+<p>The app was built to predict age based on the image that the user uploads. It was trained on a specific set of images, and that is the main thing.</p>
+</div>
+</article>
+
+<article class="proj" id="emotion-recognition">
+<h3>Facial Emotion Recognition Deep Learning App</h3>
+<p>Facial Emotion Recognition Deep Learning App - Predicts facial emotions based on user-uploaded imagery using a custom model trained on specialized image datasets.</p>
+<div class="row"><button class="more" aria-expanded="false" aria-controls="d6">Read more</button></div>
+<div class="detail" id="d6" hidden>
+<p>The app was built to predict the facial emotion based on the image that the user uploads. It was trained on a specific set of images.</p>
+</div>
+</article>
+</section>
+
+<section id="skills" aria-labelledby="h-skills">
+<h2 id="h-skills">Skills and tools</h2>
+<ul class="skills"><li>Python</li><li>SQL</li><li>Computer Vision</li><li>Figma</li><li>Pandas</li><li>Scikit-Learn</li><li>TensorFlow</li><li>Keras</li><li>Seaborn</li><li>Matplotlib</li><li>Streamlit</li></ul>
+</section>
+
+<section id="experience" aria-labelledby="h-exp">
+<h2 id="h-exp">Professional experience</h2>
+<div class="job">
+<h3>IT Intern</h3>
+<p class="meta">National Bank of Kuwait (NBK), Bahrain | Jul 2026 – Aug 2026</p>
+<ul>
+<li><b>Enterprise Endpoint Provisioning &amp; Security:</b> Supported the IT Operations team with laptop provisioning and domain onboarding for new employees, assisting in manual IPv4 configuration, and endpoint security setup (CrowdStrike, Trellix encryption, Windows Defender Firewall).</li>
+<li><b>System Administration &amp; Policy Enforcement:</b> Gained hands-on exposure to system administration workflows, observing software package installations and supporting group policy updates across client workstations.</li>
+<li><b>IT Service Management (ITSM) &amp; Helpdesk Operations:</b> Assisted with daily IT service desk operations by observing ticket resolution in Remedy, tracking print server inventory via Optimidoc, and supporting hardware maintenance across multi-branch locations.</li>
+</ul>
+</div>
+</section>
+
+<section id="education" aria-labelledby="h-edu">
+<h2 id="h-edu">Education</h2>
+<ul class="list">
+<li><span>Data Science Bootcamp Program, General Assembly, Bahrain</span><time>Nov 2026</time></li>
+<li><span>Bachelor of Information Technology – Information Systems, University of Bahrain</span><time>Aug 2026</time></li>
+<li><span>High School Diploma, Al Rawabi Private School, Bahrain</span><time>June 2021</time></li>
+</ul>
+</section>
+
+<section id="certs" aria-labelledby="h-cert">
+<h2 id="h-cert">Certifications</h2>
+<ul class="list">
+<li><span>Introduction to Cybersecurity Tools &amp; Cyberattacks - IBM</span><time>Mar 2026</time></li>
+<li><span>Cybersecurity Compliance Framework, Standards &amp; Regulations - IBM</span><time>Oct 2025</time></li>
+<li><span>Introduction to Cybersecurity Essentials - IBM</span><time>Jul 2025</time></li>
+<li><span>Planning, Auditing and Maintaining Enterprise Systems - University of Colorado</span><time>Mar 2025</time></li>
+</ul>
+</section>
+
+<section id="contact" class="contact" aria-labelledby="h-contact">
+<h2 id="h-contact">Contact</h2>
+<a href="mailto:Saydooh8@gmail.com">Saydooh8@gmail.com</a>
+<a href="https://www.linkedin.com/in/sayed-hashem-alhussaini" target="_blank" rel="noopener">linkedin.com/in/sayed-hashem-alhussaini</a>
+<a href="https://github.com/Saydoo8" target="_blank" rel="noopener">github.com/Saydoo8</a>
+</section>
+<footer>Sayed Hashem Alhussaini</footer>
 </main>
-
-<footer>
-  <div class="wrap">&copy; <span id="year">2026</span> Sayed Hashem Alhussaini</div>
-</footer>
-
+</div>
 <script>
 (function(){
-  var root=document.documentElement, btn=document.getElementById('theme');
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function setTheme(t){
-    root.setAttribute('data-theme',t);
-    btn.textContent=t==='dark'?'Light':'Dark';
-    btn.setAttribute('aria-label','Switch to '+(t==='dark'?'light':'dark')+' mode');
-  }
-  try{var s=localStorage.getItem('theme');if(s)setTheme(s);}catch(e){}
-  btn.addEventListener('click',function(){
-    var t=root.getAttribute('data-theme')==='dark'?'light':'dark';
-    setTheme(t);
-    try{localStorage.setItem('theme',t);}catch(e){}
-  });
-  document.getElementById('year').textContent=new Date().getFullYear();
-
-  var out=document.getElementById('out'), form=document.getElementById('form'), input=document.getElementById('cmd');
-  var busy=false;
-  var data={
-    whoami:'<strong>Sayed Hashem Alhussaini</strong>\nData Scientist &amp; IT Operations and Information Security Specialist\nInformation Systems graduate, University of Bahrain.\nDriven by competitive energy, strategic execution and tactical teamwork.',
-    skills:'<span class="ok">Security</span>\n  Endpoint Security Administration\n  CrowdStrike Deployment\n  Trellix Encryption\n<span class="ok">IT Operations</span>\n  System Administration\n  ITSM &amp; Remedy Ticketing\n  Network &amp; Cloud Basics\n<span class="ok">Data</span>\n  Python Data Analytics\n  SQL &amp; Database Management',
-    experience:'<strong>IT Intern, National Bank of Kuwait</strong>\nJuly 2026 – August 2026\nEndpoint security provisioning, CrowdStrike deployment, Trellix encryption and Remedy ticketing administration. Evaluated payment system resilience.',
-    education:'<strong>B.S. in Information Systems</strong>, University of Bahrain\nIBM Cybersecurity Certifications\nUniversity of Colorado Enterprise Certifications',
-    contact:'Email     <a href="mailto:saydooh8@gmail.com">saydooh8@gmail.com</a>\nLinkedIn  <a href="https://www.linkedin.com/in/sayed-hashem-alhussaini" target="_blank" rel="noopener">linkedin.com/in/sayed-hashem-alhussaini</a>\nGitHub    <a href="https://github.com/Saydoo8" target="_blank" rel="noopener">github.com/Saydoo8</a>',
-    help:'Available commands: whoami, skills, experience, education, contact, clear'
-  };
-  function line(cls,html){var p=document.createElement('p');p.className=cls;p.innerHTML=html;out.appendChild(p);out.scrollTop=out.scrollHeight;return p;}
-  function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-  function respond(c){
-    var k=c.trim().toLowerCase();
-    if(!k)return;
-    line('cmd','<span class="ps">$</span> '+esc(k));
-    if(k==='clear'){out.innerHTML='';return;}
-    if(data[k]){line('out',data[k]);}
-    else{line('out','Command not found: '+esc(k)+'. Type help to see the available commands.');}
-  }
-  function typeCmd(c,done){
-    var p=line('cmd','<span class="ps">$</span> ');
-    if(reduce){p.innerHTML+=c;done();return;}
-    var i=0;(function step(){
-      p.innerHTML='<span class="ps">$</span> '+c.slice(0,++i);
-      if(i<c.length)setTimeout(step,45);else setTimeout(done,220);
-    })();
-  }
-  function intro(){
-    busy=true;
-    typeCmd('whoami',function(){
-      line('out',data.whoami);
-      typeCmd('skills --list',function(){
-        line('out',data.skills);
-        line('out','Type a command below, or choose one of the shortcuts.');
-        busy=false;
-      });
-    });
-  }
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(busy)return;
-    respond(input.value);input.value='';
-  });
-  document.getElementById('chips').addEventListener('click',function(e){
-    var b=e.target.closest('button');
-    if(b&&!busy)respond(b.getAttribute('data-c'));
-  });
-  intro();
+var root=document.documentElement,btn=document.getElementById('theme');
+function setTheme(t){root.setAttribute('data-theme',t);btn.textContent=t==='dark'?'Light mode':'Dark mode';btn.setAttribute('aria-pressed',t==='dark')}
+setTheme(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+btn.addEventListener('click',function(){setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark')});
+function toggle(b,open){var d=document.getElementById(b.getAttribute('aria-controls'));if(open===undefined)open=d.hidden;d.hidden=!open;b.setAttribute('aria-expanded',open);b.textContent=open?'Show less':'Read more'}
+document.querySelectorAll('.more').forEach(function(b){b.addEventListener('click',function(){toggle(b)})});
+function openHash(){var el=location.hash&&document.querySelector('.proj'+location.hash);if(el){toggle(el.querySelector('.more'),true)}}
+window.addEventListener('hashchange',openHash);openHash();
 })();
 </script>
 </body>
